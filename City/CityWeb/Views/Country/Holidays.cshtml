@@ -1,0 +1,25 @@
+﻿@model CityWeb.Domain.Entities.Country
+@{
+    ViewData["Title"] = "Holidays";
+}
+
+<h3>Country @Model.Name</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Code</th>
+            <th scope="col">Name</th>
+            <th scope="col">Holidays</th>
+            <th scope="col">Calendar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="col">@Model.Code</td>
+            <td class="col">@Model.Name</td>
+            <td class="col">@Model.Holidays</td>
+            <td class="col">@Html.ActionLink("...", string.Format("Calendar/{0}", Model.Code))</td>
+        </tr>
+    </tbody>
+</table>
+

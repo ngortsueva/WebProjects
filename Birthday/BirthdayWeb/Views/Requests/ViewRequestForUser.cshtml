@@ -1,0 +1,37 @@
+﻿@model RequestUserViewModel
+@{
+    ViewData["Title"] = "Request";
+}
+
+<div asp-validation-summary=" All" class="text-danger"></div>
+
+<form asp-action="Approve" asp-route-id="@Model.requestMessage.Id" 
+                           asp-route-objecttype="@Model.requestMessage.ObjectType">
+    <div class="form-group">
+        <label asp-for="requestMessage.Id"></label>
+        <input asp-for="requestMessage.Id" class="form-control" disabled />
+    </div>
+    <div class="form-group">
+        <label asp-for="requestMessage.Message"></label>
+        <input asp-for="requestMessage.Message" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="requestMessage.ObjectId"></label>
+        <input asp-for="requestMessage.ObjectId" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="requestMessage.ObjectType"></label>
+        <input asp-for="requestMessage.ObjectType" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="UserName"></label>
+        <input asp-for="UserName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="UserEmail"></label>
+        <input asp-for="UserEmail" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Approve</button>
+    <a asp-action="Delete" asp-route-id="@Model.requestMessage.Id" class="btn btn-danger">Delete</a>
+    <a asp-action="Index" class="btn btn-default">Cancel</a>
+</form>

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<WordCategory>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col">
+        <div class="caption">
+            <h2>Word subjects</h2>
+            <a class="btn btn-primary" asp-action="Create" asp-controller="WordCategory">Create word</a>
+        </div>
+        <div class="alphabet">
+            @{
+                char[] alphabet = Enumerable.Range('A', 26).Select(x => (char)x).ToArray();
+
+                foreach (char symbol in alphabet)
+                {
+                    <a href="#" onclick="filterWord(event, 'WordCategory')">@symbol</a>
+                }
+            }
+        </div>
+        <table id="dictionary" class="table table-striped">
+            <tr><th>Id</th><th>English</th><th>Russia</th><th></th></tr>
+            @if (Model.Count() == 0)
+            {
+                <tr><td colspan="3" class="text-center">No words</td></tr>
+            }
+            else
+            {
+                @foreach (var wordCategory in Model)
+                {
+                    <tr>
+                        <td>@wordCategory.Id</td>
+                        <td>@wordCategory.Name</td>
+                        <td>@wordCategory.NameRu</td>
+                        <td>
+                            <form asp-controller="WordCategory" asp-action="Delete" asp-route-id="@wordCategory.Id" method="post">
+                                <a class="btn btn-sm btn-primary" asp-controller="WordCategory" asp-action="Edit" asp-route-id="@wordCategory.Id">Edit</a>
+                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div>
+<script src="~/js/translate.js"></script>
+

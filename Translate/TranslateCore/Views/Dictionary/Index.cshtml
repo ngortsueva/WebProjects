@@ -1,0 +1,66 @@
+﻿@model  IEnumerable<Word>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col">
+        <div class="caption">
+            <h2>Dictionary ENG-RU</h2>
+
+            <a href="#" class="btn btn-primary" onclick="showModal('AddWord', null)">Create word</a>
+        </div>
+        <div class="alphabet">
+            @{ 
+                char[] alphabet = Enumerable.Range('A', 26).Select(x => (char)x).ToArray();
+
+                foreach(char symbol in alphabet)
+                {
+                    <a href="#" onclick="filterWord(event,'Dictionary')">@symbol</a>
+                }
+            }
+        </div>
+        <table id="dictionary" class="table table-striped">
+            <tr><th>Id</th><th>English</th><th>Russia</th><th>Type</th><th>Category</th><th></th></tr>
+            @if (Model.Count() == 0)
+            {
+                <tr><td colspan="3" class="text-center">No words</td></tr>
+            }
+            else
+            {
+                @foreach (var word in Model)
+                {
+                    <tr id="@word.Id">
+                        <td>@word.Id</td>
+                        <td>@word.WordEng</td>
+                        <td>@word.WordRu</td>
+                        <td>
+                            @if(word.WordType == null) { <button class="btn btn-sm" onclick="showModal('AddType', @word.Id)">Add type</button> }
+                            else { 
+                                @word.WordType.Name <button class="btn">...</button>
+                            }
+                        </td>
+                        <td>
+                            @if(word.Category == null) { <button class="btn btn-sm" onclick="showModal('AddCategory', @word.Id)">Add category</button> }
+                            else {
+                                @word.Category.Name <button class="btn">...</button>
+                            }
+                        </td>
+                        <td>
+                            <form asp-controller="Dictionary" asp-action="Delete" asp-route-id="@word.Id" method="post">
+                                <a href="#" class="btn btn-sm btn-primary" onclick="showModal('EditWord', @word.Id)">Edit</a>
+                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div>
+<div id="AddWord"></div>
+<div id="AddType"></div>
+<div id="AddCategory"></div>
+<div id="EditWord"></div>
+
+

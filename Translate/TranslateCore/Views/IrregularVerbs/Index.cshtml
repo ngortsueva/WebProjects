@@ -1,0 +1,51 @@
+﻿@model IEnumerable<IrregularVerb>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col">
+        <div class="caption">
+            <h2>Irregular Verbs</h2>
+
+            <a class="btn btn-primary" asp-action="Create" asp-controller="IrregularVerbs">Create word</a>
+        </div>
+        <div class="alphabet">
+            @{
+                char[] alphabet = Enumerable.Range('A', 26).Select(x => (char)x).ToArray();
+
+                foreach (char symbol in alphabet)
+                {
+                    <a href="#" onclick="filterWord(event, 'IrregularVerbs')">@symbol</a>
+                }
+            }
+        </div>
+        <table id="dictionary" class="table table-striped">
+            <tr><th>Id</th><th>Infinitive</th><th>Past Simple</th><th>Past Participle</th><th>Translate</th><th></th></tr>
+            @if (Model.Count() == 0)
+            {
+                <tr><td colspan="3" class="text-center">No words</td></tr>
+            }
+            else
+            {
+                @foreach (var verb in Model)
+                {
+                    <tr>
+                        <td>@verb.Id</td>
+                        <td>@verb.Infinitive</td>
+                        <td>@verb.PastSimple</td>
+                        <td>@verb.PastParticiple</td>
+                        <td>@verb.TranslateRu</td>
+                        <td>
+                            <form asp-controller="IrregularVerbs" asp-action="Delete" asp-route-id="@verb.Id" method="post">
+                                <a class="btn btn-sm btn-primary" asp-controller="IrregularVerbs" asp-action="Edit" asp-route-id="@verb.Id">Edit</a>
+                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div>
+<script src="~/js/translate.js"></script>

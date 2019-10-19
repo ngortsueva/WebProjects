@@ -1,0 +1,23 @@
+﻿@model IEnumerable<CountryWeb.Models.Country>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<link rel="stylesheet" href="~/css/nav-left.css" />
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="">Regions</a></li>
+                <li><a asp-action="Index" asp-route-continent="">All</a></li>
+                <vc:region-list country-id="@ViewBag.SelectedCountry"></vc:region-list>
+            </ul>
+            <a class="btn btn-primary" asp-action="Create">Create</a>
+        </div>
+        <div class="col-sm-9 main">            
+        </div>
+    </div>
+</div>
+

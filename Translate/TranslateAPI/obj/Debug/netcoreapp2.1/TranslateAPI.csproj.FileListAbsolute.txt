@@ -1,0 +1,16 @@
+C:\Users\foxland\Dev\TranslateAPI\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\foxland\Dev\TranslateAPI\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\foxland\Dev\TranslateAPI\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\foxland\Dev\TranslateAPI\bin\Debug\netcoreapp2.1\TranslateAPI.deps.json
+C:\Users\foxland\Dev\TranslateAPI\bin\Debug\netcoreapp2.1\TranslateAPI.runtimeconfig.json
+C:\Users\foxland\Dev\TranslateAPI\bin\Debug\netcoreapp2.1\TranslateAPI.runtimeconfig.dev.json
+C:\Users\foxland\Dev\TranslateAPI\bin\Debug\netcoreapp2.1\TranslateAPI.dll
+C:\Users\foxland\Dev\TranslateAPI\obj\Debug\netcoreapp2.1\TranslateAPI.csproj.CoreCompileInputs.cache
+C:\Users\foxland\Dev\TranslateAPI\obj\Debug\netcoreapp2.1\TranslateAPI.RazorAssemblyInfo.cache
+C:\Users\foxland\Dev\TranslateAPI\obj\Debug\netcoreapp2.1\TranslateAPI.RazorAssemblyInfo.cs
+C:\Users\foxland\Dev\TranslateAPI\obj\Debug\netcoreapp2.1\TranslateAPI.AssemblyInfoInputs.cache
+C:\Users\foxland\Dev\TranslateAPI\obj\Debug\netcoreapp2.1\TranslateAPI.AssemblyInfo.cs
+C:\Users\foxland\Dev\TranslateAPI\obj\Debug\netcoreapp2.1\TranslateAPI.RazorTargetAssemblyInfo.cache
+C:\Users\foxland\Dev\TranslateAPI\bin\Debug\netcoreapp2.1\TranslateAPI.pdb
+C:\Users\foxland\Dev\TranslateAPI\obj\Debug\netcoreapp2.1\TranslateAPI.dll
+C:\Users\foxland\Dev\TranslateAPI\obj\Debug\netcoreapp2.1\TranslateAPI.pdb

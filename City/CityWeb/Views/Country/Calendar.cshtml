@@ -1,0 +1,41 @@
+﻿@model CityWeb.Domain.Entities.Country
+@{
+    ViewData["Title"] = "Calendar";
+}
+
+<h2>Calendar for @Model.Name</h2>
+<div id="calendar"></div>
+
+@section ScriptsCalendar{
+    <script>
+            $(function () {
+                var holidays = '@Model.Holidays';
+
+                console.log(holidays);
+
+                if (holidays) {
+                    var array_date = holidays.split(';');
+
+                    var my_datasource = [];
+
+                    array_date.forEach(function (item) {
+                        var array_day = item.split('-');
+                        var year = array_day[0];
+                        var month = array_day[1] - 1;
+                        var day = array_day[2];
+
+                        var holidayDate = new Date(year, month, day);
+
+                        my_datasource.push({ startDate: holidayDate, endDate: holidayDate, color: '#FF0000' });
+                    });
+
+                    var currentYear = new Date().getFullYear();
+
+                    $('#calendar').calendar({
+                        dataSource: my_datasource,
+                        style: 'background'
+                    });
+                }
+            });
+    </script>
+}

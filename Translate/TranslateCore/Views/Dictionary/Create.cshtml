@@ -1,0 +1,35 @@
+﻿@model Word
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create Word</h2>
+<div class="row">
+    <div class="col-md-3">
+        <form asp-action="Create" asp-controller="Dictionary" method="post" autocomplete="off">
+            <div class="form-group">
+                <label asp-for="WordEng"></label>
+                <input asp-for="WordEng" class="form-control" oninput="checkIsExist(event)"/>
+                <label id="labelExist" class="alert-danger">Word already exist</label>
+                @Html.ValidationMessageFor(m => m.WordEng)
+            </div>
+            <div class="form-group">
+                <label asp-for="WordRu"></label>
+                <input asp-for="WordRu" class="form-control" />
+                @Html.ValidationMessageFor(m => m.WordRu)
+            </div>
+            <div class="form-group">
+                <label>Word Type</label>
+                <input id="WordType" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Word Subject</label>
+                <input id="WordSubject" class="form-control" />
+            </div>
+            <button id="buttonCreate" type="submit" class="btn btn-primary">Create</button>
+            <a asp-action="Index" class="btn btn-default">Cancel</a>
+        </form>
+    </div>
+</div>
+<script src="~/js/translate.js"></script>
+

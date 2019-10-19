@@ -1,0 +1,24 @@
+﻿@model Color
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Edit Word</h2>
+<div class="row">
+    <div class="col-md-3">
+        <form asp-action="Edit" asp-controller="Colors" method="post">
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="ColorEng"></label>
+                <input asp-for="ColorEng" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ColorRu"></label>
+                <input asp-for="ColorRu" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a asp-action="Index" class="btn btn-default">Cancel</a>
+        </form>
+    </div>
+</div>
+

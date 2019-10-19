@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28917.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BirthdayConsole", "BirthdayConsole\BirthdayConsole.csproj", "{F26BEE87-2252-45B4-B845-50F0FBF6B8A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestBirthdayConsole", "UnitTestBirthdayConsole\UnitTestBirthdayConsole.csproj", "{1006353C-0B38-41D0-BDEB-AE2AD42C5D48}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BirthdayWeb", "BirthdayWeb\BirthdayWeb.csproj", "{2ED5D4C8-8CF8-4011-AAB0-F443D9073B38}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F26BEE87-2252-45B4-B845-50F0FBF6B8A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F26BEE87-2252-45B4-B845-50F0FBF6B8A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F26BEE87-2252-45B4-B845-50F0FBF6B8A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1006353C-0B38-41D0-BDEB-AE2AD42C5D48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1006353C-0B38-41D0-BDEB-AE2AD42C5D48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1006353C-0B38-41D0-BDEB-AE2AD42C5D48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ED5D4C8-8CF8-4011-AAB0-F443D9073B38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ED5D4C8-8CF8-4011-AAB0-F443D9073B38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ED5D4C8-8CF8-4011-AAB0-F443D9073B38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ED5D4C8-8CF8-4011-AAB0-F443D9073B38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03E5748C-CE09-4195-80A7-D9C003A6F4A5}
+	EndGlobalSection
+EndGlobal

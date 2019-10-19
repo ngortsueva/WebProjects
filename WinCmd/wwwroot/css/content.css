@@ -1,0 +1,227 @@
+﻿#content {
+    width: 1200px;
+    height: 7100;
+    margin: 0 auto;
+    background: #e7e7e7;
+}
+
+#maintext {
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-right: 50px;
+}
+
+
+
+
+#it-news {
+    margin-top: 50px;
+    padding-top: 10px;
+}
+
+/* ------------------------------Правый столбец--------------------------------*/
+#colLeft {
+    float: left;
+    width: 250px;
+    height: 625px;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 40px;
+    background: #c69911;
+}
+
+    #colLeft ul {
+        padding-left: 20px;
+    }
+
+        #colLeft ul li {
+            padding-top: 20px;
+            font-size: 12pt;
+        }
+
+            #colLeft ul li a {
+                color: #000;
+            }
+
+#itemPC ul {
+    padding-left: 20px;
+}
+
+    #itemPC ul li {
+        padding-top: 10px;
+        font-size: 10pt;
+    }
+
+#itemPC li a {
+    color: #000;
+}
+
+#itemNetwork ul {
+    padding-left: 20px;
+}
+
+    #itemNetwork ul li {
+        padding-top: 10px;
+        font-size: 10pt;
+    }
+
+#itemNetwork li a {
+}
+
+/* ------------------------------Правый раздел--------------------------------*/
+#colRight {
+    float: left;
+    width: 865px;
+    margin-top: 20px;
+    margin-left: 0px;
+    border: 0px solid #000;
+}
+
+/* ------------------------------Страница Системные переменные--------------------------------*/
+#tableVariables {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+
+
+    #tableVariables th {
+        border: 1px solid #000;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #tableVariables td {
+        border: 1px solid #000;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+/* ------------------------------Страница Команды--------------------------------*/
+#list-cmd-advantages {
+    list-style-type: initial;
+    list-style-position: inside;
+    padding-left: 5px;
+    padding-top: 0px;
+}
+
+    #list-cmd-advantages li {
+        padding-top: 5px;
+        font-size: 11pt;
+        font-weight: bold;
+    }
+
+    #list-cmd-advantages p {
+        margin: 0px;
+        padding: 0px;
+        padding-left: 15px;
+        font-size: 12pt;
+        font-weight: normal;
+    }
+
+#tb-cmd-use {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+    #tb-cmd-use th {
+        text-align: center;
+        vertical-align: center;
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-right: 10px;
+        border: 1px solid #000;
+    }
+
+    #tb-cmd-use td {
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-right: 10px;
+        border: 1px solid #000;
+    }
+
+/* ------------------------------ Страница Компьютер -> Системная информация --------------------------------*/
+#tb-command, #tb-command-system, #tb-command-files, #tb-command-users {
+    border: 0px solid #000;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+    #tb-command td {
+        padding-left: 5px;
+        padding-top: 5px;
+        padding-right: 15px;
+    }
+
+    #tb-command .command {
+        font-weight: bold;
+    }
+
+.section-command {
+    margin-top: 10px;
+}
+
+    .section-command p {
+        padding-top: 5px;
+    }
+
+    .section-command ul {
+        padding-left: 20px;
+    }
+
+section table caption {
+    text-align: left;
+    padding-left: 5px;
+    padding-top: 5px;
+    font-size: 12pt;
+}
+
+#tb-command-system td {
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 15px;
+}
+
+#tb-command-system .command {
+    font-weight: bold;
+}
+
+#tb-command-files td {
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 15px;
+}
+
+#tb-command-files .command {
+    font-weight: bold;
+}
+
+#tb-command-users td {
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 15px;
+}
+
+#tb-command-users .command {
+    font-weight: bold;
+}
+
+/* ------------------------------Страница Сеть--------------------------------*/
+
+/* ------------------------------Страница WMIC--------------------------------*/
+#tableWMIC {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+    #tableWMIC th {
+        border: 1px solid #000;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #tableWMIC td {
+        border: 1px solid #000;
+        padding-left: 10px;
+        padding-right: 10px;
+    }

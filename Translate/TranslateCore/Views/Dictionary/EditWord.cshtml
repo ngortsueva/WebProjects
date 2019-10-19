@@ -1,0 +1,38 @@
+﻿@model Word
+@{
+    ViewData["Title"] = "Add Word";
+    Layout = null;
+}
+
+<input type="hidden" name="hiddenWordId" id="hiddenWordId" value="@ViewBag.wordId" />
+
+<div class="modal fade" id="modalEditWord" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Edit Word</h4>
+            </div>
+            <div class="modal-body">
+                <form asp-action="Edit" asp-controller="Dictionary" method="post">
+                    <input type="hidden" asp-for="Id" />
+                    <div class="form-group">
+                        <label asp-for="WordEng"></label>
+                        <input asp-for="WordEng" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="WordRu"></label>
+                        <input asp-for="WordRu" class="form-control" />
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-dismiss="modal">Save</button>
+                    <a asp-action="Index" class="btn btn-default" data-dismiss="modal">Cancel</a>
+                </form>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+
+    </div>
+</div>

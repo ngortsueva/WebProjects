@@ -1,0 +1,48 @@
+﻿@model Word
+@{
+    ViewData["Title"] = "Add Word";
+    Layout = null;
+}
+
+<input type="hidden" name="hiddenWordId" id="hiddenWordId" value="@ViewBag.wordId" />
+
+<div class="modal fade" id="modalAddWord" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add Word</h4>
+            </div>
+            <div class="modal-body">
+                <form asp-action="Create" asp-controller="Dictionary" method="post" autocomplete="off">
+                    <div class="form-group">
+                        <label asp-for="WordEng"></label>
+                        <input asp-for="WordEng" class="form-control" oninput="checkIsExist(event)" />
+                        <label id="labelExist" class="alert-danger">Word already exist</label>
+                        @Html.ValidationMessageFor(m => m.WordEng)
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="WordRu"></label>
+                        <input asp-for="WordRu" class="form-control" />
+                        @Html.ValidationMessageFor(m => m.WordRu)
+                    </div>
+                    <div class="form-group">
+                        <label>Word Type</label>
+                        <input id="WordType" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Word Subject</label>
+                        <input id="WordSubject" class="form-control" />
+                    </div>
+                    <button id="buttonCreate" type="submit" class="btn btn-primary" data-dismiss="modal">Create</button>
+                    <a asp-action="Index" class="btn btn-default" data-dismiss="modal">Cancel</a>
+                </form>
+            </div>
+            <div class="modal-footer">                
+            </div>
+        </div>
+
+    </div>
+</div>

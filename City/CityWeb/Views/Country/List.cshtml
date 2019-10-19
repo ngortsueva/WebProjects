@@ -1,0 +1,24 @@
+﻿@model IEnumerable<CityWeb.Domain.Entities.Country>
+@{
+    ViewData["Title"] = "List of countries";
+}
+
+<h3>Countries List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="col">@item.Code</td>
+                <td class="col">@Html.ActionLink(item.Name, string.Format("Holidays/{0}", item.Code))</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

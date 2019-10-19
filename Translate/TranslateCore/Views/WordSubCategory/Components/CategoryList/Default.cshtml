@@ -1,0 +1,10 @@
+﻿@model IEnumerable<WordCategory>
+
+@{
+    Layout = null;
+}
+
+@foreach (var wordCategory in Model)
+{
+    <li><a asp-controller="WordSubCategory" asp-action="Index" asp-route-categoryId="@wordCategory.Id">@wordCategory.Name</a></li>
+}

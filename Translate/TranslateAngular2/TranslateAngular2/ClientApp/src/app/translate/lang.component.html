@@ -1,0 +1,20 @@
+<p *ngIf="!langs"><em>Loading...</em></p>
+
+<div class="col-sm-3 bg-info p-a-1">
+    {{langs.Length}} Languages
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="caption">
+            <h2>Languages</h2>
+        </div>
+        <table class="table table-striped" *ngIf="langs">
+            <tr><th>Id</th><th>Language</th></tr>
+            <tr *ngFor="let item of langs">
+              <td>{{item.id}}</td>
+              <td>{{item.name}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

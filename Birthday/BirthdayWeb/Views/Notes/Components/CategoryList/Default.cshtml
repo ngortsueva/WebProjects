@@ -1,0 +1,10 @@
+﻿@model IEnumerable<string>
+
+@{
+    Layout = null;
+}
+
+@foreach (string category in Model)
+{
+    <li><a asp-controller="Notes" asp-action="Index" asp-route-category="@category">@category</a></li>
+}

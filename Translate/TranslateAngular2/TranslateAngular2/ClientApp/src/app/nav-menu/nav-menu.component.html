@@ -1,0 +1,34 @@
+<header>
+  <nav class='navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3'>
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]='["/"]'>Translate App</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle navigation"
+        [attr.aria-expanded]="isExpanded" (click)="toggle()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse collapse navbar-left" [ngClass]='{"show": isExpanded}'>
+        <ul class="navbar-nav">
+          <li class="nav-item" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+            <a class="nav-link text-dark" [routerLink]='["/"]'>Home</a>
+          </li>
+          <li class="nav-item"><a class="nav-link text-dark" [routerLink]='["/words"]'>Dictionary</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" [routerLink]='["/translate"]'>Translate</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" [routerLink]='["/lang"]'>Languages</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" [routerLink]='["/irrverbs"]'>Irregular Verbs</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" [routerLink]='["/verbs"]'>Verbs</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" [routerLink]='["/pronouns"]'>Pronouns</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" [routerLink]='["/colors"]'>Colors</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" [routerLink]='["/numbers"]'>Numbers</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" [routerLink]='["/word-types"]'>Word Types</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" [routerLink]='["/word-categories"]'>Categories</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" [routerLink]='["/word-subcategoriess"]'>Sub Categories</a></li>
+        </ul>
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item"><a class="nav-link text-dark" [routerLink]='["/about"]'>About</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" [routerLink]='["/contact"]'>Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

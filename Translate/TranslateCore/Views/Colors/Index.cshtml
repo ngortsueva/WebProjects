@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Color>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col">
+        <div class="caption">
+            <h2>Colors</h2>
+
+            <a class="btn btn-primary" asp-action="Create" asp-controller="Colors">Create word</a>
+        </div>        
+        <table id="color" class="table table-striped">
+            <tr><th>Id</th><th>English</th><th>Russia</th><th></th></tr>
+            @if (Model.Count() == 0)
+            {
+                <tr><td colspan="3" class="text-center">No colors</td></tr>
+            }
+            else
+            {
+                @foreach (var color in Model)
+                {
+                    <tr>
+                        <td>@color.Id</td>
+                        <td>@color.ColorEng</td>
+                        <td>@color.ColorRu</td>
+                        <td>
+                            <form asp-controller="Colors" asp-action="Delete" asp-route-id="@color.Id" method="post">
+                                <a class="btn btn-sm btn-primary" asp-controller="Colors" asp-action="Edit" asp-route-id="@color.Id">Edit</a>
+                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div>
+<script src="~/js/translate.js"></script>
+

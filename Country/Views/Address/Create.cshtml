@@ -1,0 +1,40 @@
+﻿@model AddressViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create Address</h2>
+<form asp-action="Create" asp-controller="Address" method="post">
+    <div class="form-group">
+        <label asp-for="Address.Id"></label>
+        <input asp-for="Address.Id" class="form-control" disabled />
+    </div>    
+    <div class="form-group">
+        <label>Country</label>
+        <select asp-for="SelectedCountry" asp-items="@Model.Countries" class="form-control" onchange="LoadRegions();"></select>
+    </div>
+    <div class="form-group">
+        <label>Region</label>
+        <select asp-for="SelectedRegion" asp-items="@Model.Regions" class="form-control" onchange="LoadCities();"></select>
+    </div>
+    <div class="form-group">
+        <label>City</label>
+        <select asp-for="SelectedCity" asp-items="@Model.Cities" class="form-control" onchange="LoadStreets();"></select>
+    </div>
+    <div class="form-group">
+        <label>Street</label>
+        <select asp-for="SelectedStreet" asp-items="@Model.Streets" class="form-control"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address.Building"></label>
+        <input asp-for="Address.Building" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Address.Flat"></label>
+        <input asp-for="Address.Flat" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a asp-action="Index" class="btn btn-default">Cancel</a>
+</form>
+

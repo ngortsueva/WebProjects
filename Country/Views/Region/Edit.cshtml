@@ -1,0 +1,29 @@
+﻿@model Region
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit Region</h2>
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-3">
+        <form asp-action="Edit" method="post">
+            <input type="hidden" asp-for="Country.Id" />
+            <div class="form-group">
+                <label asp-for="Id"></label>
+                <input asp-for="Id" class="form-control" disabled />
+            </div>
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Country</label>
+                <input asp-for="Country.Name" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a asp-action="Index" class="btn btn-default">Cancel</a>
+        </form>
+    </div>
+</div>

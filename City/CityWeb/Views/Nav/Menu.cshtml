@@ -1,0 +1,18 @@
+﻿@model IEnumerable<CityWeb.Domain.Entities.Continent>
+@{
+    ViewData["Title"] = "Menu";
+}
+
+@Html.ActionLink("Home", "List", "Continent")
+
+@foreach (var item in Model)
+{
+    @Html.RouteLink(item.Name,
+        new {
+            controller = "Country",
+            action = "List",
+            continent = item.Id
+        }
+    )
+}
+

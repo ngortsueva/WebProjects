@@ -1,0 +1,38 @@
+﻿@model IEnumerable<WordType>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col">
+        <div class="caption">
+            <h2>Word types</h2>
+            <a class="btn btn-primary" asp-action="Create" asp-controller="WordTypes">Create word</a>
+        </div>        
+        <table id="dictionary" class="table table-striped">
+            <tr><th>Id</th><th>English</th><th>Russia</th><th></th></tr>
+            @if (Model.Count() == 0)
+            {
+                <tr><td colspan="3" class="text-center">No words</td></tr>
+            }
+            else
+            {
+                @foreach (var wordType in Model)
+                {
+                    <tr>
+                        <td>@wordType.Id</td>
+                        <td>@wordType.Name</td>  
+                        <td>@wordType.NameRu</td> 
+                        <td>
+                            <form asp-controller="WordTypes" asp-action="Delete" asp-route-id="@wordType.Id" method="post">
+                                <a class="btn btn-sm btn-primary" asp-controller="WordTypes" asp-action="Edit" asp-route-id="@wordType.Id">Edit</a>
+                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,34 @@
+﻿@model IEnumerable<WordCategory>
+@{
+    ViewData["Title"] = "AddType";
+    Layout = null;
+}
+
+<input type="hidden" name="hiddenWordId" id="hiddenWordId" value="@ViewBag.wordId" />
+
+<div class="modal fade" id="modalAddCategory" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add Category</h4>
+            </div>
+            <div class="modal-body">
+                <ul class="list-group">
+                    @foreach (var item in Model)
+                    {
+                        <a href="#" class="list-group-item" onclick="addCategory(@item.Id)">@item.Name</a>
+                    }
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Add</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+

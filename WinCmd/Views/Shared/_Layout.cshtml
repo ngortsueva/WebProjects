@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WinCmd</title>
+
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/header.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/content.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/footer.css" />
+</head>
+<body>
+    <header>        
+        <nav id="mainMenu">
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index">Main</a></li>
+                <li><a asp-controller="News" asp-action="Index">News</a></li>
+                <li><a asp-controller="Commands" asp-action="Index">Commands</a></li>
+                <li><a asp-controller="Utility" asp-action="Index">Utility</a></li>
+                <li><a asp-controller="Scripts" asp-action="Index">Scripts</a></li>
+                <li><a asp-controller="Home" asp-action="Links">Links</a></li>
+            </ul>            
+        </nav>
+    </header>
+    <div id="content">
+            @RenderBody()
+    </div>
+
+    <footer>
+        <div id="footerInner">
+            <div id="icons">
+                <img src="images/facebook.png" alt="FB"></img>
+                <img src="images/twitter.png" alt="TW"></img>
+                <img src="images/linkedin.png" alt="LinkedIn"></img>
+                <img src="images/youtube.png" alt="YouTube"></img>
+            </div>
+            <div id="footerMenu">
+                <div class="footeritem">Карта сайта</div>                
+            </div>
+            <div id="copyright">
+                <div id="company">Copyright 2019</div>                
+            </div>
+        </div>
+    </footer>   
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

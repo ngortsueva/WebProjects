@@ -1,0 +1,53 @@
+﻿@model IEnumerable<LogMessage>
+@{
+    ViewData["Title"] = "Logs";
+}
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a asp-area="" asp-controller="Logs" asp-action="Information">Info</a></li>
+                <li><a asp-area="" asp-controller="Logs" asp-action="Warning">Warning</a></li>
+                <li><a asp-area="" asp-controller="Logs" asp-action="Error">Error</a></li>
+                <li><a asp-area="" asp-controller="Logs" asp-action="Debug">Debug</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <form asp-action="Clear" method="post">
+            <button type="submit" class="btn btn-primary">Clear</button>
+        </form>        
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="bg-primary panel-body"><h4>Logs</h4></div>
+            <table class="table table-striped">
+                <tr><th>Id</th><th>Level</th><th>Date and Time</th><th>Source</th><th>Status</th><th>Action</th><th>Message</th></tr>
+                @if (Model.Count() == 0)
+                {
+                    <tr><td colspan="3" class="text-center">No Messages</td></tr>
+                }
+                else
+                {
+                    foreach (var message in Model)
+                    {
+                        <tr>
+                            <td>@message.Id</td>
+                            <td>@message.Level</td>
+                            <td>@message.Date</td>
+                            <td>@message.Source</td>
+                            <td>@message.Action</td>
+                            <td>@message.Status</td>                        
+                            <td>@message.Message</td>                        
+                        </tr>
+                    }
+                }
+            </table>        
+        </div>
+    </div>
+</div>

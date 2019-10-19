@@ -1,0 +1,31 @@
+﻿@model IrregularVerb
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create Word</h2>
+<div class="row">
+    <div class="col-md-3">
+        <form asp-action="Create" asp-controller="IrregularVerbs" method="post">
+            <div class="form-group">
+                <label asp-for="Infinitive"></label>
+                <input asp-for="Infinitive" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="PastSimple"></label>
+                <input asp-for="PastSimple" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="PastParticiple"></label>
+                <input asp-for="PastParticiple" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="TranslateRu"></label>
+                <input asp-for="TranslateRu" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">Create</button>
+            <a asp-action="Index" class="btn btn-default">Cancel</a>
+        </form>
+    </div>
+</div>
+

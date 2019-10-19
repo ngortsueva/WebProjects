@@ -1,0 +1,23 @@
+﻿@model Pronoun
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create Pronoun</h2>
+<div class="row">
+    <div class="col-md-3">
+        <form asp-action="Create" asp-controller="Pronouns" method="post">
+            <div class="form-group">
+                <label asp-for="PronounEng"></label>
+                <input asp-for="PronounEng" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="PronounRu"></label>
+                <input asp-for="PronounRu" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">Create</button>
+            <a asp-action="Index" class="btn btn-default">Cancel</a>
+        </form>
+    </div>
+</div>
+

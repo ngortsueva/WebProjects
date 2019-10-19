@@ -1,0 +1,38 @@
+﻿@model  IEnumerable<Language>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="caption">
+            <h2>Languages</h2>
+
+            <a class="btn btn-primary" asp-action="Create" asp-controller="Langs">Create language</a>
+        </div>
+        <table class="table table-striped">
+            <tr><th>Id</th><th>Language</th><th></th></tr>
+            @if (Model.Count() == 0)
+            {
+                <tr><td colspan="3" class="text-center">No languages</td></tr>
+            }
+            else
+            {
+                @foreach (var lang in Model)
+                {
+                    <tr>
+                        <td>@lang.Id</td>
+                        <td>@lang.Name</td>                        
+                        <td>
+                            <form asp-controller="Langs" asp-action="Delete" asp-route-id="@lang.Id" method="post">
+                                <a class="btn btn-sm btn-primary" asp-controller="Langs" asp-action="Edit" asp-route-id="@lang.Id">Edit</a>
+                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div>
+

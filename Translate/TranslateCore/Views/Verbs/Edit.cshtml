@@ -1,0 +1,24 @@
+﻿@model Verb
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Create Word</h2>
+<div class="row">
+    <div class="col-md-3">
+        <form asp-action="Edit" asp-controller="Verbs" method="post">
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="VerbEng"></label>
+                <input asp-for="VerbEng" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="VerbRu"></label>
+                <input asp-for="VerbRu" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a asp-action="Index" class="btn btn-default">Cancel</a>
+        </form>
+    </div>
+</div>
+

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Pronoun>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col">
+        <div class="caption">
+            <h2>Pronouns</h2>
+
+            <a class="btn btn-primary" asp-action="Create" asp-controller="Pronouns">Create word</a>
+        </div>        
+        <table id="dictionary" class="table table-striped">
+            <tr><th>Id</th><th>English</th><th>Russia</th><th></th></tr>
+            @if (Model.Count() == 0)
+            {
+                <tr><td colspan="3" class="text-center">No words</td></tr>
+            }
+            else
+            {
+                @foreach (var pronoun in Model)
+                {
+                    <tr>
+                        <td>@pronoun.Id</td>
+                        <td>@pronoun.PronounEng</td>
+                        <td>@pronoun.PronounRu</td>
+                        <td>
+                            <form asp-controller="Pronouns" asp-action="Delete" asp-route-id="@pronoun.Id" method="post">
+                                <a class="btn btn-sm btn-primary" asp-controller="Pronouns" asp-action="Edit" asp-route-id="@pronoun.Id">Edit</a>
+                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div>
+<script src="~/js/translate.js"></script>
+

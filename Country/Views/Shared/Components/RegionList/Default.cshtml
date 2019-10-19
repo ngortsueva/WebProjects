@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Region>
+
+@{
+    Layout = null;
+}
+
+@foreach (var region in Model)
+{
+    <li><a asp-controller="Country" asp-action="Index" asp-route-country="@ViewBag.SelectedCountry" asp-route-region="@region.Id">@region.Name</a></li>
+}

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Number>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col">
+        <div class="caption">
+            <h2>Numbers</h2>
+
+            <a class="btn btn-primary" asp-action="Create" asp-controller="Numbers">Create word</a>
+        </div>        
+        <table id="dictionary" class="table table-striped">
+            <tr><th>Id</th><th>English</th><th>Russia</th><th></th></tr>
+            @if (Model.Count() == 0)
+            {
+                <tr><td colspan="3" class="text-center">No words</td></tr>
+            }
+            else
+            {
+                @foreach (var number in Model)
+                {
+                    <tr>
+                        <td>@number.Id</td>
+                        <td>@number.Word</td>
+                        <td>@number.WordRu</td>
+                        <td>
+                            <form asp-controller="Numbers" asp-action="Delete" asp-route-id="@number.Id" method="post">
+                                <a class="btn btn-sm btn-primary" asp-controller="Numbers" asp-action="Edit" asp-route-id="@number.Id">Edit</a>
+                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div>
+
+

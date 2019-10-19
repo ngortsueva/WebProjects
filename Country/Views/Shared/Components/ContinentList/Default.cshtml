@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Continent>
+
+@{
+    Layout = null;
+}
+
+@foreach (var continent in Model)
+{
+    <li><a asp-controller="Continent" asp-action="Index" asp-route-id="@continent.Id">@continent.Name</a></li>
+}

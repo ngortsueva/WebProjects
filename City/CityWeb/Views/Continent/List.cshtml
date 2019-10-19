@@ -1,0 +1,24 @@
+﻿@model IEnumerable<CityWeb.Domain.Entities.Continent>
+@{
+    ViewData["Title"] = "List of continents";
+}
+
+<h3>Continents</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="col">#</th>
+            <th class="col">Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="col">@item.Id</td>
+                <td class="col">@Html.RouteLink(item.Name, new { controller = "Country", action = "List", continent = item.Id })</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

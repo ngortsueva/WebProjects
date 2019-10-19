@@ -1,0 +1,46 @@
+﻿@model IEnumerable<RequestMessage>
+@{
+    ViewData["Title"] = "Requests";
+}
+
+<div class="container">
+    <div class="row">
+        <form asp-action="Clear" method="post">
+            <button type="submit" class="btn btn-primary">Clear</button>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="bg-primary panel-body"><h4>Requests</h4></div>
+            <table class="table table-striped">
+                <tr><th>Id</th><th>Date</th><th>Message</th><th></th><th></th></tr>
+                @if (Model.Count() == 0)
+                {
+                    <tr><td colspan="3" class="text-center">No Requests</td></tr>
+                }
+                else
+                {
+                    foreach (var message in Model)
+                    {
+                        <tr>
+                            <td>@message.Id</td>
+                            <td>@message.Date</td>
+                            <td>@message.Message</td>
+                            <td>
+                                <form asp-action="Delete" asp-route-id="@message.Id" method="post">
+                                    <a class="btn btn-sm btn-info" asp-action="ViewRequest" 
+                                       asp-route-id="@message.Id" asp-route-objecttype="@message.ObjectType">View</a>
+                                    <a class="btn btn-sm btn-primary" asp-action="Approve" 
+                                       asp-route-id="@message.Id" asp-route-objecttype="@message.ObjectType">Approve</a>
+                                    <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                </form>
+                            </td>
+                            <td></td>
+                        </tr>
+                    }
+                }
+            </table>
+        </div>
+    </div>
+</div>

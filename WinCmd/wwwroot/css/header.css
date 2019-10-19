@@ -1,0 +1,90 @@
+﻿header {
+    width: 100%;
+}
+
+#headerInner {
+    position: relative;
+    width: 1200px;
+    height: 150px;
+    border: 0px solid #a3b3c3;
+    margin: 0 auto;
+    background: url(images/header.png) 0px 0px repeat-y;
+}
+
+/* -------------------------------верхнее меню--------------------------*/
+#topMenu {
+    float: right;
+    width: 270px;
+    height: 40px;
+    margin-right: 8px;
+    margin-top: 25px;
+    border: 1px solid #000;
+    background: #4c9cca;
+}
+
+    #topMenu ul {
+        float: left;
+        padding-left: 4px;
+        padding-top: 8px;
+    }
+
+        #topMenu ul li {
+            float: left;
+            padding: 0px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+            #topMenu ul li a {
+                color: #000;
+                font-size: 12pt;
+            }
+
+/* ------------------------------Логотип--------------------------------*/
+#logo {
+    float: left;
+    margin-left: 50px;
+    margin-top: 25px;
+    color: #000;
+    font-size: 28pt;
+    background: #4c9cca;
+}
+
+#logotext {
+    clear: both;
+    font-size: 14pt;
+    margin-top: 10px;
+}
+
+/* ------------------------------Главное меню---------------------------*/
+#mainMenu {
+    width: 1200px;
+    height: 50px;
+    background: #c69911;
+    margin: 0 auto;
+}
+
+    #mainMenu ul {
+        float: left;
+        padding-top: 12px;
+    }
+
+        #mainMenu ul li {
+            float: left;
+            padding-left: 50px;
+        }
+
+            #mainMenu ul li:hover {
+            }
+
+            #mainMenu ul li a {
+                color: #000;
+                font-size: 12pt;
+            }
+
+/* --------------------------------------------------------------*/
+#rss {
+    float: right;
+    margin-right: 8px;
+    margin-top: 8px;
+}

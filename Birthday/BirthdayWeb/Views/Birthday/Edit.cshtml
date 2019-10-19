@@ -1,0 +1,27 @@
+﻿@model Person
+
+<div class="bg-primary panel-body"><h2>Edit Person</h2></div>
+
+<div asp-validation-summary=" All" class="text-danger"></div>
+
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Relation"></label>
+        <input asp-for="Relation" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Birthday"></label>
+        <input asp-for="Birthday" class="form-control"/>
+    </div>
+    <button type="submit" class="btn btn-primary" asp-route-returnurl="@ViewBag.ReturnUrl">Save</button>
+    <a asp-action="@ViewBag.ReturnUrl" class="btn btn-default">Cancel</a>
+</form>
+
