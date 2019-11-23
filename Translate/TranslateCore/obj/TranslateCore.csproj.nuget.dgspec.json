@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\foxland\\Dev\\TranslateCore\\TranslateCore.csproj": {}
+    "C:\\Users\\foxland\\Dev\\WebProjects\\Translate\\TranslateCore\\TranslateCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\foxland\\Dev\\TranslateCore\\TranslateCore.csproj": {
+    "C:\\Users\\foxland\\Dev\\WebProjects\\Translate\\TranslateCore\\TranslateCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\foxland\\Dev\\TranslateCore\\TranslateCore.csproj",
+        "projectUniqueName": "C:\\Users\\foxland\\Dev\\WebProjects\\Translate\\TranslateCore\\TranslateCore.csproj",
         "projectName": "TranslateCore",
-        "projectPath": "C:\\Users\\foxland\\Dev\\TranslateCore\\TranslateCore.csproj",
+        "projectPath": "C:\\Users\\foxland\\Dev\\WebProjects\\Translate\\TranslateCore\\TranslateCore.csproj",
         "packagesPath": "C:\\Users\\foxland\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\foxland\\Dev\\TranslateCore\\obj\\",
+        "outputPath": "C:\\Users\\foxland\\Dev\\WebProjects\\Translate\\TranslateCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

@@ -12600,11 +12600,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\foxland\\Dev\\Lessons\\Lessons6_EF\\Country\\CountryWeb.csproj",
+      "projectUniqueName": "C:\\Users\\foxland\\Dev\\WebProjects\\Country\\CountryWeb.csproj",
       "projectName": "CountryWeb",
-      "projectPath": "C:\\Users\\foxland\\Dev\\Lessons\\Lessons6_EF\\Country\\CountryWeb.csproj",
+      "projectPath": "C:\\Users\\foxland\\Dev\\WebProjects\\Country\\CountryWeb.csproj",
       "packagesPath": "C:\\Users\\foxland\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\foxland\\Dev\\Lessons\\Lessons6_EF\\Country\\obj\\",
+      "outputPath": "C:\\Users\\foxland\\Dev\\WebProjects\\Country\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
